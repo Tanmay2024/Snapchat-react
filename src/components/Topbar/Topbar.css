@@ -41,6 +41,7 @@
 .icon{
     width:45px;
     height:45px;
+    overflow: visible;
     background:#222;
     border-radius:50%;
     display:flex;
@@ -91,4 +92,65 @@
     margin:0;
     color:#aaa;
     font-size:13px;
+}
+
+.iconWrapper{
+    position: relative;
+}
+
+.notificationBox{
+    position:absolute;
+    top:55px;
+    right:0;
+    width:260px;
+    background:#1e1e1e;
+    border-radius:12px;
+    padding:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+    z-index:99999;
+}
+
+.notificationBox p{
+    margin:10px 0;
+    color:white;
+    font-size:14px;
+}
+
+.iconBtn{
+    background:none;
+    border:none;
+    cursor:pointer;
+    color:white;
+    font-size:22px;
+}
+
+.notification {
+    position: relative;
+}
+
+.icon {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #222;
+    color: white;
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    background: #fffc00;
+    color: black;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
 }

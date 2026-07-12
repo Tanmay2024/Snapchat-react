@@ -1,7 +1,12 @@
 import "./Topbar.css";
 import { FaSearch, FaBell, FaComments } from "react-icons/fa";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Topbar() {
+  const navigate = useNavigate();
+  const [showNotifications, setShowNotifications] = useState(false);
+
   return (
     <header className="topbar">
 
@@ -15,13 +20,34 @@ function Topbar() {
 
       <div className="topbar-right">
 
-        <div className="icon notification">
-          <FaBell />
-          <span>5</span>
+        <div className="notification">
+          <button
+            className="icon"
+            onClick={() => {
+              alert("Bell clicked");
+              setShowNotifications(!showNotifications);
+            }}
+          >
+            <FaBell />
+            <span className="badge">5</span>
+          </button>
+
+          {showNotifications && (
+            <div className="notificationBox">
+              <p>📸 Rohith added a new Story</p>
+              <p>💬 Pranav sent you a message</p>
+              <p>🔥 Your Snap Streak is active!</p>
+            </div>
+          )}
         </div>
 
         <div className="icon">
-          <FaComments />
+          <button
+            className="iconBtn"
+            onClick={() => navigate("/chats")}
+          >
+            <FaComments />
+          </button>
         </div>
 
         <div className="user-info">

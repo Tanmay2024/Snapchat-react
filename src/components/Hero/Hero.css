@@ -2,9 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 90vh;
+    min-height:calc(100vh - 80px);
     background: #fffc00;
-    padding: 70px 8%;
+    padding: 40px 8% 60px;
 }
 
 .hero-left {

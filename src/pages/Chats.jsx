@@ -3,12 +3,17 @@ import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
+import tanmayImg from "../assets/images/tanmay.jpeg";
+import rohithImg from "../assets/images/rohith.jpeg";
+import santoshImg from "../assets/images/santosh.jpeg";
+import santhoshSnapImg from "../assets/images/santosh-snap.jpeg";
+
 function Chats() {
     const friends = [
         {
             name: "Tanmay",
             status: "Online",
-            image: "https://api.dicebear.com/9.x/personas/svg?seed=Tanmay",
+            image: tanmayImg,
             messages: [
                 { text: "Hey 👋", sender: "them" },
                 { text: "Hi Tanmay!", sender: "me" },
@@ -20,7 +25,7 @@ function Chats() {
         {
             name: "Rohith",
             status: "Online",
-            image: "https://i.pravatar.cc/60?img=1",
+            image: rohithImg,
             messages: [
                 { text: "Hi 👋", sender: "them" },
                 { text: "Hello Rohith!", sender: "me" },
@@ -32,7 +37,7 @@ function Chats() {
         {
             name: "Pranav",
             status: "Typing...",
-            image: "https://i.pravatar.cc/60?img=2",
+            image: santhoshSnapImg,
             messages: [
                 { text: "Hey 😊", sender: "them" },
                 { text: "Hi Pranav!", sender: "me" },
@@ -44,7 +49,7 @@ function Chats() {
         {
             name: "Santhosh",
             status: "2 min ago",
-            image: "https://i.pravatar.cc/60?img=3",
+            image: santoshImg,
             messages: [
                 { text: "Bro!", sender: "them" },
                 { text: "What's up?", sender: "me" },
@@ -58,16 +63,17 @@ function Chats() {
     const [message, setMessage] = useState("");
     const [chatData, setChatData] = useState(friends);
     const [search, setSearch] = useState("");
+
     const filteredFriends = chatData.filter((friend) =>
         friend.name.toLowerCase().includes(search.toLowerCase())
     );
+
     const [callStatus, setCallStatus] = useState("");
     const navigate = useNavigate();
 
     return (
         <div className="chatsPage">
 
-            {/* Sidebar */}
             <div className="chatSidebar">
 
                 <div className="searchBox">
@@ -84,8 +90,9 @@ function Chats() {
                 {filteredFriends.map((friend) => (
                     <div
                         key={friend.name}
-                        className={`friend ${selectedFriend.name === friend.name ? "active" : ""
-                            }`}
+                        className={`friend ${
+                            selectedFriend.name === friend.name ? "active" : ""
+                        }`}
                         onClick={() => setSelectedFriend(friend)}
                     >
                         <img src={friend.image} alt={friend.name} />
@@ -96,10 +103,7 @@ function Chats() {
                         </div>
                     </div>
                 ))}
-
             </div>
-
-            {/* Chat Area */}
 
             <div className="chatArea">
 
@@ -113,11 +117,8 @@ function Chats() {
                         />
 
                         <div>
-
                             <h3>{selectedFriend.name}</h3>
-
                             <span>{selectedFriend.status}</span>
-
                         </div>
 
                     </div>
@@ -144,7 +145,9 @@ function Chats() {
                         <button
                             className="actionBtn"
                             onClick={() => {
-                                setCallStatus(`📹 Connecting video call with ${selectedFriend.name}...`);
+                                setCallStatus(
+                                    `📹 Connecting video call with ${selectedFriend.name}...`
+                                );
 
                                 setTimeout(() => {
                                     setCallStatus(`❌ Video call unavailable`);
@@ -183,7 +186,9 @@ function Chats() {
                         .map((msg, index) => (
                             <div
                                 key={index}
-                                className={`msg ${msg.sender === "me" ? "right" : "left"}`}
+                                className={`msg ${
+                                    msg.sender === "me" ? "right" : "left"
+                                }`}
                             >
                                 {msg.text}
                             </div>
@@ -223,8 +228,7 @@ function Chats() {
                                             }
                                         ]
 
-                                    }
-
+                                    };
                                 }
 
                                 return friend;
@@ -255,15 +259,14 @@ function Chats() {
                                                     }
                                                 ]
 
-                                            }
-
+                                            };
                                         }
 
                                         return friend;
 
-                                    })
+                                    });
 
-                                })
+                                });
 
                             }, 1000);
 
