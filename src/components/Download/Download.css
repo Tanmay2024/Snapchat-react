@@ -1,0 +1,36 @@
+.download{
+    padding:100px 8%;
+    text-align:center;
+    background:#fff;
+}
+
+.download h2{
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.download p{
+    font-size:18px;
+    color:#555;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:40px;
+    line-height:1.8;
+}
+
+.download-buttons{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.download-buttons img{
+    width:220px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.download-buttons img:hover{
+    transform:translateY(-8px);
+}

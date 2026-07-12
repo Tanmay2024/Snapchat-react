@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f0f0f;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dashboard {
+
+    display: grid;
+
+    grid-template-columns: 260px 1fr 320px;
+
+    min-height: 100vh;
+
+    gap: 25px;
+
+    padding: 25px;
+
+    background:linear-gradient(180deg,#0f0f0f,#171717);
+
+}
+
+.left-panel {
+
+    background: #1b1b1b;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+.center-panel {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+.right-panel {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+.welcome-section {
+
+    height: 180px;
+
+    background: #222;
+
+    border-radius: 20px;
+
+}
+
+.stories-section {
+
+    height: 120px;
+
+    background: #222;
+
+    border-radius: 20px;
+
+}
+
+.cards-section {
+
+    height: 240px;
+
+    background: #222;
+
+    border-radius: 20px;
+
+}
+
+.bottom-section {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+}
+
+.recent-chats {
+
+    height: 280px;
+
+    background: #222;
+
+    border-radius: 20px;
+
+}
+
+.spotlight {
+
+    height: 280px;
+
+    background: #222;
+
+    border-radius: 20px;
+
+}
+
+.profile-card {
+
+    height: 220px;
+
+    background: #222;
+
+    border-radius: 20px;
+
+}
+
+.quick-actions {
+
+    height: 260px;
+
+    background: #222;
+
+    border-radius: 20px;
+
+}
+
+.friend-activity {
+
+    height: 320px;
+
+    background: #222;
+
+    border-radius: 20px;
+
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width:1024px) {
+
+    .dashboard {
+
+        grid-template-columns: 240px 1fr;
+
+    }
+
+    .right-panel {
+
+        display: none;
+
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:768px) {
+
+    .dashboard {
+
+        grid-template-columns: 1fr;
+
+        padding: 15px;
+
+    }
+
+    .left-panel {
+
+        display: none;
+
+    }
+
+    .bottom-section {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width:480px) {
+
+    .dashboard {
+
+        padding: 10px;
+
+        gap: 15px;
+
+    }
+
+    .welcome-section {
+
+        padding: 20px;
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.welcome,
+.storyRow,
+.featureCards,
+.recentChats,
+.spotlightTrending,
+.profileCard,
+.quickActions,
+.friendActivity,
+.darkMode{
+
+animation:fadeUp .7s ease;
+
+}
+
+.welcome,
+.storyRow,
+.recentChats,
+.spotlightTrending,
+.profileCard,
+.quickActions,
+.friendActivity,
+.darkMode{
+
+transition:all .35s ease;
+
+}
+
+.welcome:hover,
+.storyRow:hover,
+.recentChats:hover,
+.spotlightTrending:hover,
+.profileCard:hover,
+.quickActions:hover,
+.friendActivity:hover,
+.darkMode:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 18px 40px rgba(0,0,0,.35);
+
+}

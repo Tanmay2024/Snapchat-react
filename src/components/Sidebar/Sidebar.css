@@ -1,0 +1,289 @@
+.sidebar{
+
+    height:100vh;
+
+    background:#0b0b0b;
+
+    border-radius:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:25px;
+
+    color:white;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:35px;
+
+}
+
+.logo img{
+
+width:46px;
+
+transition:.3s;
+
+}
+
+.logo img:hover{
+
+transform:rotate(15deg) scale(1.08);
+
+}
+
+.logo h2{
+
+    font-size:32px;
+
+    font-weight:700;
+
+}
+
+.menu{
+
+    list-style:none;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.menu li{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+padding:15px 18px;
+
+border-radius:16px;
+
+cursor:pointer;
+
+transition:all .3s ease;
+
+font-size:17px;
+
+font-weight:500;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.menu li:hover{
+
+background:#202020;
+
+transform:translateX(8px);
+
+}
+
+.menu .active{
+
+background:#fffc00;
+
+color:#000;
+
+font-weight:700;
+
+box-shadow:0 0 25px rgba(255,252,0,.35);
+
+}
+
+.menu li::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:4px;
+
+height:100%;
+
+background:#fffc00;
+
+transform:scaleY(0);
+
+transition:.3s;
+
+}
+
+.menu li:hover::before{
+
+transform:scaleY(1);
+
+}
+
+.badge{
+
+    margin-left:auto;
+
+    width:28px;
+
+    height:28px;
+
+    border-radius:50%;
+
+    background:#fffc00;
+
+    color:black;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:bold;
+
+}
+
+.camera-card{
+
+    margin-top:auto;
+
+    background:#151515;
+
+    border-radius:22px;
+
+    padding:22px;
+
+    text-align:center;
+
+}
+
+.ghost{
+
+    font-size:70px;
+
+}
+
+.camera-card h3{
+
+    margin-top:10px;
+
+    margin-bottom:12px;
+
+}
+
+.camera-card p{
+
+    color:#aaa;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+.camera-card button{
+
+width:100%;
+
+margin-top:20px;
+
+border:none;
+
+background:#fffc00;
+
+color:black;
+
+border-radius:40px;
+
+padding:15px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:10px;
+
+font-size:16px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.camera-card button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 0 30px rgba(255,252,0,.45);
+
+}
+
+.profile{
+
+    margin-top:20px;
+
+    background:#151515;
+
+    border-radius:20px;
+
+    padding:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.profile img{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+}
+
+.profile p{
+
+    color:#999;
+
+    margin-top:4px;
+
+    font-size:14px;
+
+}
+
+.menu-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+.sidebarProfile{border:0;background:transparent;width:100%;text-align:left;cursor:pointer;}
+.logoutButton{margin:14px 14px 0;border:1px solid #444;background:transparent;color:#ffb4b4;border-radius:10px;padding:11px;cursor:pointer;font-weight:bold;}
+.logoutButton:hover{background:#3b2020;}

@@ -1,0 +1,189 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 90vh;
+    background: #fffc00;
+    padding: 70px 8%;
+}
+
+.hero-left {
+    width: 50%;
+}
+
+.hero-tag {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.hero-left h1 {
+
+    font-size: 70px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero-left p {
+
+    font-size: 20px;
+    line-height: 1.8;
+    max-width: 550px;
+
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 40px;
+    transition: .3s;
+    font-weight: bold;
+}
+
+.btn-primary {
+
+    background: black;
+    color: white;
+}
+
+.btn-primary:hover {
+
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+
+    background: white;
+    color: black;
+}
+
+.btn-secondary:hover {
+
+    transform: translateY(-3px);
+}
+
+.hero-right {
+
+    width: 45%;
+    text-align: center;
+}
+
+.hero-right img {
+
+    width: 100%;
+    max-width: 488px;
+}
+
+@media(max-width:900px) {
+
+    .hero {
+
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .hero-left,
+    .hero-right {
+
+        width: 100%;
+
+    }
+
+    .hero-left h1 {
+
+        font-size: 48px;
+
+    }
+
+    .hero-buttons {
+
+        justify-content: center;
+
+    }
+
+    .hero-right {
+
+        margin-top: 50px;
+
+    }
+
+}
+
+.hero-right img {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.btn-primary:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+
+}
+
+.btn-secondary:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+
+}
+
+.hero-left{
+    animation:fadeLeft 1s ease;
+}
+
+.hero-right{
+    animation:fadeRight 1s ease;
+}
+
+@keyframes fadeLeft{
+    from{
+        opacity:0;
+        transform:translateX(-50px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes fadeRight{
+    from{
+        opacity:0;
+        transform:translateX(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
