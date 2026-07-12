@@ -1,46 +1,149 @@
-# Snapchat React
+# 📸 Snapchat React Clone
 
-A Snapchat-inspired team social media frontend built with React and Vite. This project extends an existing component-based dashboard with complete Camera, Stories, Spotlight, Profile, and Settings pages while retaining the original project structure and UI language. The demo account is Admin (`admin@snapchat.com`).
+A responsive Snapchat-inspired web application built using **React.js** and **Vite**. The project recreates the core Snapchat experience with a modern UI, interactive navigation, and responsive design.
 
-## Features
 
-- Responsive landing, login, password, dashboard, and chat screens
-- Searchable chats with friend switching, message sending, and simulated replies
-- Browser webcam capture with flip, flash, capture, and visual filter controls
-- Interactive story viewer with next and previous controls
-- Spotlight categories, likes, saves, and share action
-- Editable profile plus achievement and activity sections
-- In-session account/privacy settings toggles
-- Working dashboard navigation, sidebar logout, and reusable team avatars
+## 🌐 Live Demo
 
-## Tech stack
+https://snapchat-react.vercel.app/
 
-- React 19
-- Vite 8
+
+## 📂 GitHub Repository
+
+https://github.com/Tanmay2024/Snapchat-react
+
+
+# 👥 Team Members
+
+| Name | Role |
+|------|------|
+| **Tanmay Guruvugari** | Team Leader, GitHub Repository Management, Dashboard, Authentication, Integration, Deployment |
+| **Rohith** | Features, Recent Chats, Friend Activity |
+| **Pranav** | Landing Page, Navbar, Hero Section |
+| **Santhosh** | Stories, Spotlight, UI Enhancements |
+
+
+# ✨ Features
+
+- 🏠 Responsive Landing Page
+- 🔐 Login & Password Authentication UI
+- 📊 Interactive Dashboard
+- 💬 Chats with Search
+- 📸 Camera Page
+- 📖 Stories
+- 🎥 Spotlight
+- 👤 User Profile
+- ⚙️ Settings
+- 🔔 Notifications
+- 📱 Responsive Design
+- 🚪 Logout Navigation
+
+
+# 🛠️ Technologies Used
+
+- React.js
+- Vite
 - React Router DOM
+- CSS3
 - React Icons
-- CSS
+- JavaScript (ES6+)
 
-## Run locally
+
+# 📁 Project Structure
+
+snapchat-react/
+│
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── package.json
+├── vite.config.js
+└── README.md
+
+
+
+# 🚀 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/Tanmay2024/Snapchat-react.git
+```
+
+Go to the project folder
+
+```bash
+cd Snapchat-react
+```
+
+Install dependencies
 
 ```bash
 npm install
+```
+
+Run the project
+
+```bash
 npm run dev
 ```
 
-Create a production build with:
+---
+
+# 🏗️ Production Build
 
 ```bash
 npm run build
 ```
 
-## Deployment
+Preview Production
 
-The project is ready for Vercel. Use `npm run build` as the build command and `dist` as the output directory.
+```bash
+npm run preview
+```
 
-## Team
+---
 
-- Tanmay Guruvugari
-- Rohith
-- Pranav
-- Santhosh
+# 📱 Pages
+
+- Home
+- Login
+- Password
+- Dashboard
+- Chats
+- Stories
+- Spotlight
+- Camera
+- Profile
+- Settings
+
+
+# 🎯 Highlights
+
+- Built with reusable React components
+- Responsive UI for desktop and mobile
+- Client-side routing using React Router
+- Interactive dashboard
+- Team collaboration using Git & GitHub
+- Deployed using Vercel
+
+
+# 📸 Screens
+
+- Landing Page
+- Dashboard
+- Chats
+- Stories
+- Spotlight
+- Camera
+- Profile
+- Settings
+
+# 📄 License
+
+This project was developed for educational and learning purposes.
