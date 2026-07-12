@@ -1,127 +1,146 @@
-.recentChats{
+.recentChats {
 
-background:#1a1a1a;
+    background: #1a1a1a;
 
-border-radius:22px;
+    border-radius: 22px;
 
-padding:25px;
+    padding: 25px;
 
-height:100%;
-
-}
-
-.chatHeader{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-margin-bottom:20px;
+    height: 100%;
 
 }
 
-.chatHeader h2{
+.chatHeader {
 
-color:white;
+    display: flex;
 
-}
+    justify-content: space-between;
 
-.chatHeader span{
+    align-items: center;
 
-color:#fffc00;
-
-font-weight:600;
-
-cursor:pointer;
+    margin-bottom: 20px;
 
 }
 
-.chatRow{
+.chatHeader h2 {
 
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:15px 0;
-
-border-bottom:1px solid #2a2a2a;
-
-transition:.3s;
+    color: white;
 
 }
 
-.chatRow:hover{
+.chatHeader span {
 
-padding-left:8px;
+    color: #fffc00;
 
-}
+    font-weight: 600;
 
-.chatLeft{
-
-display:flex;
-
-align-items:center;
-
-gap:15px;
+    cursor: pointer;
 
 }
 
-.chatLeft img{
+.chatRow {
 
-width:55px;
+    display: flex;
 
-height:55px;
+    justify-content: space-between;
 
-border-radius:50%;
+    align-items: center;
 
-border:3px solid #fffc00;
+    padding: 15px 0;
 
-object-fit:cover;
+    border-bottom: 1px solid #2a2a2a;
 
-}
-
-.chatLeft h4{
-
-color:white;
-
-margin-bottom:5px;
+    transition: .3s;
 
 }
 
-.chatLeft p{
+.chatRow:hover {
 
-font-size:14px;
-
-}
-
-.chatRow button{
-
-width:42px;
-
-height:42px;
-
-border:none;
-
-border-radius:50%;
-
-background:#2a2a2a;
-
-color:white;
-
-cursor:pointer;
-
-transition:.3s;
+    padding-left: 8px;
 
 }
 
-.chatRow button:hover{
+.chatLeft {
 
-background:#fffc00;
+    display: flex;
 
-color:black;
+    align-items: center;
 
+    gap: 15px;
+
+}
+
+.chatLeft img {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    border: 3px solid #fffc00;
+
+    object-fit: cover;
+
+}
+
+.chatLeft h4 {
+
+    color: white;
+
+    margin-bottom: 5px;
+
+}
+
+.chatLeft p {
+
+    font-size: 14px;
+
+}
+
+.chatRow button {
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #2a2a2a;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.chatRow button:hover {
+
+    background: #fffc00;
+
+    color: black;
+
+}
+
+.chatRow {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.chatRow:hover {
+    background: #262626;
+    transform: translateX(4px);
+}
+
+.chatHeader span {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.chatHeader span:hover {
+    color: #fffc00;
 }

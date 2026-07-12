@@ -1,10 +1,11 @@
 import "./RecentChats.css";
 import { FaCamera } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 import tanmayImg from "../../assets/images/tanmay.jpeg";
 import rohithImg from "../../assets/images/rohith.jpeg";
 import santoshImg from "../../assets/images/santosh.jpeg";
-import santhoshSnapImg from "../../assets/images/pranav.jpeg";
+import pranavImg from "../../assets/images/pranav.jpeg";
 
 const chats = [
   {
@@ -23,7 +24,7 @@ const chats = [
     name: "Pranav",
     status: "Delivered • 10m",
     color: "#33b5ff",
-    image: santhoshSnapImg
+    image: pranavImg
   },
   {
     name: "Santhosh",
@@ -34,15 +35,29 @@ const chats = [
 ];
 
 function RecentChats() {
+  const navigate = useNavigate();
+
   return (
     <div className="recentChats">
+
       <div className="chatHeader">
         <h2>Recent Chats</h2>
-        <span>View All</span>
+
+        <span
+          style={{ cursor: "pointer" }}
+          onClick={() => navigate("/chats")}
+        >
+          View All
+        </span>
       </div>
 
       {chats.map((chat, index) => (
-        <div className="chatRow" key={index}>
+        <div
+          className="chatRow"
+          key={index}
+          onClick={() => navigate("/chats")}
+          style={{ cursor: "pointer" }}
+        >
           <div className="chatLeft">
             <img src={chat.image} alt={chat.name} />
 
@@ -54,11 +69,17 @@ function RecentChats() {
             </div>
           </div>
 
-          <button>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              navigate("/camera");
+            }}
+          >
             <FaCamera />
           </button>
         </div>
       ))}
+
     </div>
   );
 }
