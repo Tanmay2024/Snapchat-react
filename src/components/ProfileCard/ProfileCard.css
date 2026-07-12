@@ -1,0 +1,65 @@
+.profileCard{
+
+background:#1a1a1a;
+
+border-radius:22px;
+
+padding:25px;
+
+text-align:center;
+
+}
+
+.profileCard img{
+
+width:130px;
+
+margin:auto;
+
+display:block;
+
+margin-bottom:20px;
+
+}
+
+.profileCard h2{
+
+color:white;
+
+margin-bottom:6px;
+
+}
+
+.profileCard p{
+
+color:#999;
+
+margin-bottom:20px;
+
+}
+
+.score{
+
+background:#222;
+
+border-radius:16px;
+
+padding:18px;
+
+}
+
+.score h1{
+
+color:#fffc00;
+
+font-size:34px;
+
+}
+
+.score span{
+
+color:white;
+
+font-size:15px;
+
+}

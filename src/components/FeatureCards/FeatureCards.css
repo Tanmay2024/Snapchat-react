@@ -1,0 +1,165 @@
+.featureCards{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+}
+
+.card{
+
+background:linear-gradient(135deg,#1b1b1b,#252525);
+
+border-radius:24px;
+
+padding:28px;
+
+height:220px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+position:relative;
+
+overflow:hidden;
+
+cursor:pointer;
+
+transition:all .35s ease;
+
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 18px 40px rgba(255,252,0,.18);
+
+}
+
+.cardIcon{
+
+width:75px;
+
+height:75px;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:32px;
+
+margin-bottom:15px;
+
+transition:.35s;
+
+}
+
+.card:hover .cardIcon{
+
+transform:rotate(12deg) scale(1.1);
+
+}
+
+.yellow .cardIcon{
+
+border:4px solid #fffc00;
+
+color:#fffc00;
+
+box-shadow:0 0 25px #fffc00;
+
+}
+
+.purple .cardIcon{
+
+border:4px solid #b84cff;
+
+color:#b84cff;
+
+box-shadow:0 0 25px #b84cff;
+
+}
+
+.orange .cardIcon{
+
+border:4px solid orange;
+
+color:orange;
+
+box-shadow:0 0 25px orange;
+
+}
+
+.pink .cardIcon{
+
+border:4px solid hotpink;
+
+color:hotpink;
+
+box-shadow:0 0 25px hotpink;
+
+}
+
+.card h2{
+
+color:white;
+
+font-size:24px;
+
+margin-bottom:8px;
+
+}
+
+.card p{
+
+color:#c5c5c5;
+
+line-height:1.6;
+
+font-size:15px;
+
+}
+
+.card button{
+
+width:46px;
+
+height:46px;
+
+border:none;
+
+border-radius:50%;
+
+background:#2f2f2f;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.card button:hover{
+
+background:#fffc00;
+
+color:black;
+
+transform:rotate(-45deg);
+
+}
