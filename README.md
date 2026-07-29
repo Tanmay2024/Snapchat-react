@@ -1,149 +1,186 @@
-# 📸 Snapchat React Clone
+# 👻 Snapchat React Clone
 
-A responsive Snapchat-inspired web application built using **React.js** and **Vite**. The project recreates the core Snapchat experience with a modern UI, interactive navigation, and responsive design.
-
+A modern Snapchat-inspired web application built using **React.js**, **Firebase Authentication**, **Cloud Firestore**, and **Vercel**. This project recreates the core Snapchat experience with a responsive UI, authentication, real-time chat, stories, camera interface, and profile management.
 
 ## 🌐 Live Demo
 
-https://snapchat-react.vercel.app/
+🔗 https://snapchat-react.vercel.app/
+
+## 💻 GitHub Repository
+
+🔗 https://github.com/Tanmay2024/Snapchat-react
 
 
-## 📂 GitHub Repository
+# 📸 Features
 
-https://github.com/Tanmay2024/Snapchat-react
+### 🔐 Authentication
+- User Signup
+- User Login
+- Firebase Authentication
+- Protected Routes
+- Logout
+
+### 🏠 Dashboard
+- Modern Snapchat-inspired UI
+- Responsive Design
+- Sidebar Navigation
+- User Profile Card
+
+### 💬 Chat
+- Real-time Chat UI
+- Friend List
+- Search Friends
+- Typing Indicator
+- Seen Status
+- Edit Messages
+- Delete Messages
+
+### 📸 Camera
+- Browser Camera Access
+- Capture Images
+- Camera Flip
+- Camera Filters
+- Flash Toggle
+- Post Story
+
+### 📖 Stories
+- View Friends' Stories
+- Add to My Story
+- Story Navigation
+- Story Progress Indicator
+
+### 👥 Friend Management
+- Friend Requests
+- Suggested Friends
+- Accept Requests
+
+### 👤 Profile
+- Edit Profile
+- Profile Picture
+- User Information
+
+### ⚙️ Settings
+- Account Settings
+- App Preferences
+- Logout
 
 
-# 👥 Team Members
+# 🛠 Tech Stack
 
-| Name | Role |
-|------|------|
-| **Tanmay Guruvugari** | Team Leader, GitHub Repository Management, Dashboard, Authentication, Integration, Deployment |
-| **Rohith** | Features, Recent Chats, Friend Activity |
-| **Pranav** | Landing Page, Navbar, Hero Section |
-| **Santhosh** | Stories, Spotlight, UI Enhancements |
-
-
-# ✨ Features
-
-- 🏠 Responsive Landing Page
-- 🔐 Login & Password Authentication UI
-- 📊 Interactive Dashboard
-- 💬 Chats with Search
-- 📸 Camera Page
-- 📖 Stories
-- 🎥 Spotlight
-- 👤 User Profile
-- ⚙️ Settings
-- 🔔 Notifications
-- 📱 Responsive Design
-- 🚪 Logout Navigation
-
-
-# 🛠️ Technologies Used
-
+### Frontend
 - React.js
 - Vite
 - React Router DOM
-- CSS3
 - React Icons
-- JavaScript (ES6+)
+- CSS3
 
+### Backend
+- Firebase Authentication
+- Cloud Firestore
+- Firebase Storage (Configured)
 
-# 📁 Project Structure
+### Deployment
+- Vercel
 
-snapchat-react/
+# 📂 Folder Structure
+src/
 │
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── pages/
-│   ├── App.jsx
-│   └── main.jsx
+├── components/
+├── pages/
+│   ├── Dashboard
+│   ├── Chats
+│   ├── Camera
+│   ├── Stories
+│   ├── Friends
+│   ├── Profile
+│   ├── Settings
 │
-├── package.json
-├── vite.config.js
-└── README.md
-
+├── firebase/
+├── services/
+├── context/
+├── assets/
+├── App.jsx
+└── main.jsx
 
 
 # 🚀 Installation
 
-Clone the repository
+### Clone Repository
 
-```bash
 git clone https://github.com/Tanmay2024/Snapchat-react.git
-```
 
-Go to the project folder
+### Navigate
 
-```bash
 cd Snapchat-react
-```
 
-Install dependencies
+### Install Dependencies
 
-```bash
 npm install
-```
 
-Run the project
+### Start Development Server
 
-```bash
 npm run dev
-```
 
----
 
-# 🏗️ Production Build
+# 🔥 Firebase Setup
 
-```bash
+Create a `.env` file in the project root.
+
+```env
+VITE_FIREBASE_API_KEY=YOUR_API_KEY
+VITE_FIREBASE_AUTH_DOMAIN=YOUR_AUTH_DOMAIN
+VITE_FIREBASE_PROJECT_ID=YOUR_PROJECT_ID
+VITE_FIREBASE_STORAGE_BUCKET=YOUR_STORAGE_BUCKET
+VITE_FIREBASE_MESSAGING_SENDER_ID=YOUR_SENDER_ID
+VITE_FIREBASE_APP_ID=YOUR_APP_ID
+
+# 🚀 Deployment
+
+This project is deployed using **Vercel**.
+
+Build command
+
 npm run build
-```
 
-Preview Production
+Output directory
 
-```bash
-npm run preview
-```
+dist
 
----
+# 📸 Screenshots
 
-# 📱 Pages
+## Login
 
-- Home
-- Login
-- Password
-- Dashboard
-- Chats
-- Stories
-- Spotlight
-- Camera
-- Profile
-- Settings
+_Add Screenshot_
 
+## Dashboard
 
-# 🎯 Highlights
+_Add Screenshot_
 
-- Built with reusable React components
-- Responsive UI for desktop and mobile
-- Client-side routing using React Router
-- Interactive dashboard
-- Team collaboration using Git & GitHub
-- Deployed using Vercel
+## Chats
+
+_Add Screenshot_
+
+## Camera
+
+_Add Screenshot_
+
+## Stories
+
+_Add Screenshot_
+
+## Profile
+
+_Add Screenshot_
 
 
-# 📸 Screens
+# Future Improvements
 
-- Landing Page
-- Dashboard
-- Chats
-- Stories
-- Spotlight
-- Camera
-- Profile
-- Settings
-
-# 📄 License
-
-This project was developed for educational and learning purposes.
+- Voice Messages
+- Video Calling
+- Snap Map
+- Memories
+- Push Notifications
+- Story Expiration
+- Dark Mode
+- Media Sharing
+- Emoji Reactions
