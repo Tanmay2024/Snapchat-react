@@ -1,17 +1,21 @@
 import "./ProfileCard.css";
+import { useAuth } from "../../context/AuthContext";
 
 function ProfileCard() {
+
+  const { profile } = useAuth();
+
   return (
     <div className="profileCard">
 
       <img
-        src="https://upload.wikimedia.org/wikipedia/en/c/c4/Snapchat_logo.svg"
+        src={profile?.profileImage || "https://upload.wikimedia.org/wikipedia/en/c/c4/Snapchat_logo.svg"}
         alt="snapcode"
       />
 
-      <h2>Admin</h2>
+      <h2>{profile?.name || profile?.username || "Loading..."}</h2>
 
-      <p>@admin</p>
+      <p>{profile?.email || ""}</p>
 
       <div className="score">
 

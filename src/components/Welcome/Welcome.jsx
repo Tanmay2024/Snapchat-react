@@ -1,15 +1,16 @@
 import "./Welcome.css";
 import { FaFire } from "react-icons/fa";
+import { useAuth } from "../../context/AuthContext";
 
 function Welcome() {
+
+  const { profile } = useAuth();
   return (
     <section className="welcome">
 
       <div className="welcome-left">
 
-        <h1>
-         Welcome Back, Admin! 👋
-        </h1>
+        <h1>Welcome, {profile?.name || profile?.username} 👋</h1>
 
         <p>
           Let's capture some amazing moments today.
@@ -19,7 +20,7 @@ function Welcome() {
 
       <div className="streak-card">
 
-        <FaFire className="fire"/>
+        <FaFire className="fire" />
 
         <div>
 

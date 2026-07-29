@@ -3,6 +3,8 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import "./PasswordForm.css";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/images/snapchat-logo.png";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase/config";
 
 function PasswordForm() {
 
@@ -10,16 +12,31 @@ function PasswordForm() {
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
 
-    const handleLogin = (e) => {
-
+    const handleLogin = async (e) => {
         e.preventDefault();
 
-        if(password.length < 6){
+        if (password.length < 6) {
             alert("Password must contain at least 6 characters.");
             return;
         }
 
-        navigate("/dashboard");
+        const email = sessionStorage.getItem("loginEmail");
+
+        if (!email) {
+            alert("Email not found. Please login again.");
+            navigate("/login");
+            return;
+        }
+
+        try {
+            await signInWithEmailAndPassword(auth, email, password);
+
+            sessionStorage.removeItem("loginEmail");
+
+            navigate("/dashboard");
+        } catch (error) {
+            alert(error.message);
+        }
     };
 
     return (
@@ -42,15 +59,15 @@ function PasswordForm() {
                         type={showPassword ? "text" : "password"}
                         placeholder="Enter Password"
                         value={password}
-                        onChange={(e)=>setPassword(e.target.value)}
+                        onChange={(e) => setPassword(e.target.value)}
                     />
 
                     <span
                         className="eye-icon"
-                        onClick={()=>setShowPassword(!showPassword)}
+                        onClick={() => setShowPassword(!showPassword)}
                     >
 
-                        {showPassword ? <FaEyeSlash/> : <FaEye/>}
+                        {showPassword ? <FaEyeSlash /> : <FaEye />}
 
                     </span>
 

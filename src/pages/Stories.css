@@ -1,1 +1,344 @@
-.storiesPage{min-height:100vh;background:#101010;color:white;padding:35px 8%;font-family:Arial,Helvetica,sans-serif}.storiesPage header{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}.storiesPage header p{font-size:12px;color:#fffc00;letter-spacing:2px;font-weight:bold;margin:0 0 7px}.storiesPage h1{margin:0;font-size:38px}.storiesPage header button{background:#fffc00;border:0;border-radius:25px;padding:13px 18px;font-weight:bold;cursor:pointer}.storyViewer{min-height:520px;position:relative;border-radius:25px;overflow:hidden;background:linear-gradient(135deg,var(--story-color),#1d1d28 55%,#111);padding:22px}.storyViewer:after{content:"";position:absolute;width:360px;height:360px;border-radius:50%;background:#fff2;right:7%;bottom:-130px}.storyProgress{position:relative;z-index:1;display:flex;gap:6px}.storyProgress i{height:4px;flex:1;border-radius:5px;background:#fff5}.storyProgress .done{background:white}.storyAuthor{position:relative;z-index:1;margin-top:18px;display:flex;gap:10px;align-items:center}.storyAuthor>span{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:bold}.storyAuthor small{display:block;margin-top:3px;color:#eee}.storyText{position:absolute;z-index:1;left:12%;right:12%;bottom:16%;text-align:center}.storyText h2{font-size:clamp(30px,5vw,58px);line-height:1.1;max-width:680px;margin:auto}.storyText p{color:#f5f5f5}.storyPrev,.storyNext{position:absolute;z-index:2;top:0;bottom:0;width:50%;border:0;background:transparent;color:#fff0;font-size:28px}.storyPrev{left:0;text-align:left;padding-left:18px}.storyNext{right:0;text-align:right;padding-right:18px}.storyPrev:hover,.storyNext:hover{color:white}.storyCards{margin-top:22px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.storyCard{background:#1d1d1d;border:1px solid #333;color:white;border-radius:16px;padding:16px;text-align:left;cursor:pointer}.storyCard:hover{border-color:#fffc00}.storyCard span{display:grid;place-items:center;width:48px;height:48px;border-radius:16px;background:#333;margin-bottom:12px;font-weight:bold}.storyCard b,.storyCard small{display:block}.storyCard small{color:#aaa;margin-top:4px}.storyCard.mine span{background:#fffc00;color:#111}@media(max-width:650px){.storiesPage{padding:24px 16px}.storiesPage h1{font-size:30px}.storiesPage header button{font-size:12px}.storyViewer{min-height:430px}.storyCards{grid-template-columns:repeat(2,1fr)}}
+.storiesPage {
+    min-height: 100vh;
+    background: #101010;
+    color: white;
+    padding: 35px 8%;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.storiesPage header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px
+}
+
+.storiesPage header p {
+    font-size: 12px;
+    color: #fffc00;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin: 0 0 7px
+}
+
+.storiesPage h1 {
+    margin: 0;
+    font-size: 38px
+}
+
+.storiesPage header button {
+    background: #fffc00;
+    border: 0;
+    border-radius: 25px;
+    padding: 13px 18px;
+    font-weight: bold;
+    cursor: pointer
+}
+
+.storyViewer {
+    min-height: 520px;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--story-color), #1d1d28 55%, #111);
+    padding: 22px
+}
+
+.storyViewer:after {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: #fff2;
+    right: 7%;
+    bottom: -130px
+}
+
+.storyProgress {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 6px
+}
+
+.storyProgress i {
+    height: 4px;
+    flex: 1;
+    border-radius: 5px;
+    background: #fff5
+}
+
+.storyProgress .done {
+    background: white
+}
+
+.storyAuthor {
+    margin-top: 18px;
+    display: flex;
+    gap: 10px;
+    align-items: center
+}
+
+.storyAuthor>span {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: bold
+}
+
+.storyAuthor small {
+    display: block;
+    margin-top: 3px;
+    color: #eee
+}
+
+.storyText {
+    left: 12%;
+    right: 12%;
+    bottom: 16%;
+    text-align: center
+}
+
+.storyText h2 {
+    font-size: clamp(30px, 5vw, 58px);
+    line-height: 1.1;
+    max-width: 680px;
+    margin: auto
+}
+
+.storyText p {
+    color: #f5f5f5
+}
+
+.storyPrev,
+.storyNext {
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    border: 0;
+    background: transparent;
+    color: #fff0;
+    font-size: 28px
+}
+
+.storyPrev {
+    left: 0;
+    text-align: left;
+    padding-left: 18px
+}
+
+.storyNext {
+    right: 0;
+    text-align: right;
+    padding-right: 18px
+}
+
+.storyPrev:hover,
+.storyNext:hover {
+    color: white
+}
+
+.storyCards {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px
+}
+
+.storyCard {
+    background: #1d1d1d;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 16px;
+    padding: 16px;
+    text-align: left;
+    cursor: pointer
+}
+
+.storyCard:hover {
+    border-color: #fffc00
+}
+
+.storyCard span {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background: #333;
+    margin-bottom: 12px;
+    font-weight: bold
+}
+
+.storyCard b,
+.storyCard small {
+    display: block
+}
+
+.storyCard small {
+    color: #aaa;
+    margin-top: 4px
+}
+
+.storyCard.mine span {
+    background: #fffc00;
+    color: #111
+}
+
+@media(max-width:650px) {
+    .storiesPage {
+        padding: 24px 16px
+    }
+
+    .storiesPage h1 {
+        font-size: 30px
+    }
+
+    .storiesPage header button {
+        font-size: 12px
+    }
+
+    .storyViewer {
+        min-height: 430px
+    }
+
+    .storyCards {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+.storyProgress i {
+    flex: 1;
+    height: 4px;
+    background: rgba(255,255,255,.25);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.storyProgress i.done {
+    background: white;
+}
+
+.storyProgress i.active::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: white;
+    animation: fillBar 5s linear forwards;
+}
+
+@keyframes fillBar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.myStoryImage{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #fffc00;
+}
+
+.myStoryViewer{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.95);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.myStoryViewer img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:20px;
+    object-fit:contain;
+}
+
+.closeStory{
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:#fffc00;
+    color:#111;
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.storyModal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:10000;
+}
+
+.storyMenu{
+    width:340px;
+    background:#1b1b1b;
+    border-radius:20px;
+    padding:24px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    box-shadow:0 10px 40px rgba(0,0,0,.5);
+}
+
+.storyMenu h3{
+    color:#fff;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.storyMenu button{
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    background:#2b2b2b;
+    color:#fff;
+    transition:.25s;
+}
+
+.storyMenu button:hover{
+    background:#fffc00;
+    color:#111;
+}
+
+.storiesPage header button{
+    background:#fffc00;
+    color:#111;
+    border:none;
+    padding:12px 22px;
+    border-radius:30px;
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    transition:0.3s ease;
+}
+
+.storiesPage header button:hover{
+    background:#ffd500;
+    transform:translateY(-2px);
+}
