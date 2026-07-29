@@ -185,6 +185,25 @@ function Stories() {
                 ))}
             </section>
 
+            {showMyStory && (
+                <div className="storyModal">
+                    <div className="storyViewer myStoryViewer">
+                        <button
+                            className="closeStory"
+                            onClick={() => setShowMyStory(false)}
+                        >
+                            ✕
+                        </button>
+
+                        <img
+                            src={myStory}
+                            alt="My Story"
+                            className="storyImage"
+                        />
+                    </div>
+                </div>
+            )}
+
             {showOptions && (
                 <div className="storyModal">
                     <div className="storyMenu">
