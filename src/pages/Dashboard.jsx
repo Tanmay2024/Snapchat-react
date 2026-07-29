@@ -11,6 +11,7 @@ import ProfileCard from "../components/ProfileCard/ProfileCard";
 import QuickActions from "../components/QuickActions/QuickActions";
 import FriendActivity from "../components/FriendActivity/FriendActivity";
 import DarkMode from "../components/DarkMode/DarkMode";
+import Stories from "../components/Stories";
 
 function Dashboard() {
   return (
@@ -28,7 +29,7 @@ function Dashboard() {
 
         <Welcome />
 
-        <StoryRow />
+        <StoryRow /> 
 
         <FeatureCards/>
 

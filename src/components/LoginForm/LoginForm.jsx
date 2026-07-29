@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./LoginForm.css";
 
 import logo from "../../assets/images/snapchat-logo.png";
@@ -15,11 +15,12 @@ function LoginForm() {
 
         e.preventDefault();
 
-        if(!/^\S+@\S+\.\S+$/.test(username)){
+        if (!/^\S+@\S+\.\S+$/.test(username)) {
             setError("Please enter a valid email address.");
             return;
         }
 
+        sessionStorage.setItem("loginEmail", username);
         navigate("/password");
 
     };
@@ -42,7 +43,7 @@ function LoginForm() {
                     type="text"
                     placeholder="admin@snapchat.com"
                     value={username}
-                    onChange={(e)=>{setUsername(e.target.value);setError("")}}
+                    onChange={(e) => { setUsername(e.target.value); setError("") }}
                 />
 
                 {error && <p className="form-error">{error}</p>}
@@ -52,6 +53,11 @@ function LoginForm() {
                     Continue
 
                 </button>
+
+                <p style={{ textAlign: "center", marginTop: "15px" }}>
+                    Don't have an account?{" "}
+                    <Link to="/signup">Create Account</Link>
+                </p>
 
             </form>
 

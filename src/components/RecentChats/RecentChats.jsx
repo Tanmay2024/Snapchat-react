@@ -1,13 +1,17 @@
 import "./RecentChats.css";
 import { FaCamera } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useMemo, useState } from "react";
+import { useAuth } from "../../context/AuthContext";
+import { listenFriends } from "../../services/friendService";
+import { listenConversations } from "../../services/chatService";
 
 import tanmayImg from "../../assets/images/tanmay.jpeg";
 import rohithImg from "../../assets/images/rohith.jpeg";
 import santoshImg from "../../assets/images/santosh.jpeg";
 import pranavImg from "../../assets/images/pranav.jpeg";
 
-const chats = [
+const fallbackChats = [
   {
     name: "Tanmay",
     status: "Typing...",
@@ -36,6 +40,37 @@ const chats = [
 
 function RecentChats() {
   const navigate = useNavigate();
+  const { currentUser } = useAuth();
+  const [friends, setFriends] = useState([]);
+  const [conversations, setConversations] = useState([]);
+
+  useEffect(() => {
+    if (!currentUser) return undefined;
+    const stopFriends = listenFriends(currentUser.uid, setFriends);
+    const stopConversations = listenConversations(currentUser.uid, setConversations);
+    return () => { stopFriends(); stopConversations(); };
+  }, [currentUser]);
+
+  const chats = useMemo(() => {
+    if (!currentUser || friends.length === 0) return fallbackChats;
+    return friends.map((friend) => {
+      const chatId = [currentUser.uid, friend.uid].sort().join("_");
+      const conversation = conversations.find((item) => item.id === chatId);
+      return {
+        name: friend.name || friend.username,
+        uid: friend.uid,
+        image:
+          friend.profileImage ||
+          fallbackChats.find(
+            (item) =>
+              item.name.toLowerCase() ===
+              (friend.name || friend.username).toLowerCase()
+          )?.image,
+        color: friend.online ? "#52ff7a" : "#bfbfbf",
+        status: conversation?.lastMessage || (friend.online ? "Online" : "No messages yet"),
+      };
+    });
+  }, [currentUser, friends, conversations]);
 
   return (
     <div className="recentChats">

@@ -2,8 +2,10 @@ import "./Topbar.css";
 import { FaSearch, FaBell, FaComments } from "react-icons/fa";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
 function Topbar() {
+  const { profile } = useAuth();
   const navigate = useNavigate();
   const [showNotifications, setShowNotifications] = useState(false);
 
@@ -52,13 +54,16 @@ function Topbar() {
 
         <div className="user-info">
           <img
-            src="https://i.pravatar.cc/50"
+            src={
+              profile?.profileImage ||
+              "https://i.pravatar.cc/50"
+            }
             alt="profile"
           />
 
           <div>
-            <h4>Tanmay</h4>
-            <p>Online</p>
+            <h4>{profile?.name || profile?.username}</h4>
+            <p>{profile?.status || "Online"}</p>
           </div>
 
         </div>

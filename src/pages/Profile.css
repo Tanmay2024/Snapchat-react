@@ -1,1 +1,244 @@
-.profilePage{min-height:100vh;background:#101010;color:white;padding:35px 8%;font-family:Arial,Helvetica,sans-serif}.profilePage header p{color:#fffc00;font-size:12px;letter-spacing:2px;font-weight:bold;margin:0 0 7px}.profilePage h1{font-size:38px;margin:0 0 25px}.profileLayout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:22px}.profileHero,.profileStats,.profileSection{background:#1a1a1a;border:1px solid #303030;border-radius:20px;padding:23px}.profileHero{display:flex;gap:18px;align-items:center}.profileAvatar{background:#fffc00;color:#111;width:70px;height:70px;border-radius:22px;display:grid;place-items:center;font-size:31px;font-weight:bold}.profileHero h2,.profileSection h2{margin:0}.profileHero p{color:#aaa}.profileHero button{margin-left:auto;border:0;border-radius:22px;background:#fffc00;padding:11px 15px;font-weight:bold;cursor:pointer}.profileStats{margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.profileStats div{background:#242424;border-radius:13px;padding:15px}.profileStats b,.profileStats span{display:block}.profileStats b{font-size:23px;color:#fffc00}.profileStats span,.activityLine small,.achievement small{color:#aaa;font-size:12px;margin-top:5px}.profileSection{margin-top:20px}.activityLine{border-left:2px solid #fffc00;padding:7px 0 7px 13px;margin-top:15px}.activityLine b,.activityLine small{display:block}.achievement{display:flex;gap:13px;align-items:center;border-bottom:1px solid #333;padding:15px 0}.achievement svg{background:#3b2c66;color:#cbaeff;padding:11px;border-radius:12px;font-size:20px}.achievement b,.achievement small{display:block}.editOverlay{position:fixed;inset:0;background:#000a;display:grid;place-items:center;z-index:10}.editOverlay form{background:#202020;border:1px solid #444;border-radius:18px;padding:25px;width:min(400px,90%)}.editOverlay h2{margin-top:0}.editOverlay label{display:grid;gap:7px;font-size:13px}.editOverlay input{padding:12px;border-radius:10px;border:1px solid #555;background:#111;color:#fff}.editOverlay form>div{margin-top:20px;display:flex;justify-content:end;gap:10px}.editOverlay button{border:0;border-radius:9px;padding:10px 14px;cursor:pointer}.editOverlay button:last-child{background:#fffc00;font-weight:bold}@media(max-width:800px){.profilePage{padding:24px 16px}.profileLayout{grid-template-columns:1fr}.profileHero{flex-wrap:wrap}.profileHero button{margin-left:0}.profileStats{grid-template-columns:1fr}.profilePage h1{font-size:30px}}
+.profilePage{
+    padding:30px;
+    color:#fff;
+    background:#121212;
+    min-height:100vh;
+}
+
+.profilePage header p{
+    color:#fffc00;
+    letter-spacing:2px;
+    font-size:13px;
+    margin-bottom:6px;
+}
+
+.profilePage header h1{
+    font-size:34px;
+    margin-bottom:25px;
+}
+
+.profileLayout{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+}
+
+.profileHero{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:#1b1b1b;
+    padding:25px;
+    border-radius:18px;
+    margin-bottom:20px;
+}
+
+.profileAvatar{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#fffc00;
+    color:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    cursor:pointer;
+    font-size:34px;
+    font-weight:700;
+    transition:.3s;
+    flex-shrink:0;
+}
+
+.profileAvatar:hover{
+    transform:scale(1.05);
+}
+
+.profileAvatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.profileInfo{
+    flex:1;
+}
+
+.profileInfo h2{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.profileInfo p{
+    color:#ddd;
+    margin-bottom:8px;
+}
+
+.profileInfo small{
+    color:#888;
+}
+
+.profileHero button{
+    background:#fffc00;
+    color:#000;
+    border:none;
+    padding:12px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.profileHero button:hover{
+    transform:translateY(-2px);
+}
+
+.profileStats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-bottom:20px;
+}
+
+.profileStats div{
+    background:#1b1b1b;
+    padding:22px;
+    border-radius:16px;
+    text-align:center;
+}
+
+.profileStats b{
+    display:block;
+    font-size:24px;
+    color:#fffc00;
+}
+
+.profileStats span{
+    color:#bbb;
+}
+
+.profileSection{
+    background:#1b1b1b;
+    padding:22px;
+    border-radius:18px;
+}
+
+.profileSection h2{
+    margin-bottom:18px;
+}
+
+.activityLine{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 0;
+    border-bottom:1px solid #2d2d2d;
+}
+
+.activityLine:last-child{
+    border-bottom:none;
+}
+
+.activityLine b{
+    font-size:15px;
+}
+
+.activityLine small{
+    color:#888;
+}
+
+.achievement{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    background:#242424;
+    padding:18px;
+    border-radius:14px;
+    margin-bottom:15px;
+}
+
+.achievement svg{
+    color:#fffc00;
+    font-size:24px;
+}
+
+.achievement span{
+    display:flex;
+    flex-direction:column;
+}
+
+.achievement small{
+    color:#999;
+}
+
+.editOverlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.editOverlay form{
+    width:420px;
+    background:#1c1c1c;
+    padding:30px;
+    border-radius:18px;
+}
+
+.editOverlay h2{
+    margin-bottom:20px;
+}
+
+.editOverlay label{
+    display:block;
+    margin-bottom:18px;
+    font-weight:600;
+}
+
+.editOverlay input,
+.editOverlay textarea{
+    width:100%;
+    margin-top:10px;
+    background:#2a2a2a;
+    color:#fff;
+    border:none;
+    outline:none;
+    padding:12px;
+    border-radius:10px;
+    font-size:15px;
+}
+
+.editOverlay textarea{
+    min-height:90px;
+    resize:none;
+}
+
+.editButtons{
+    display:flex;
+    justify-content:flex-end;
+    gap:12px;
+    margin-top:25px;
+}
+
+.editButtons button{
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.editButtons button:first-child{
+    background:#444;
+    color:#fff;
+}
+
+.editButtons button:last-child{
+    background:#fffc00;
+    color:#000;
+}

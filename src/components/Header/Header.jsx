@@ -6,10 +6,27 @@ import {
 } from "react-icons/bs";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+import tanmayImg from "../../assets/images/tanmay.jpeg";
+import rohithImg from "../../assets/images/rohith.jpeg";
+import pranavImg from "../../assets/images/pranav.jpeg";
+import santoshImg from "../../assets/images/santosh.jpeg";
+
+const profileImages = {
+  tanmay: tanmayImg,
+  rohith: rohithImg,
+  pranav: pranavImg,
+  santhosh: santoshImg,
+  santosh: santoshImg,
+};
 
 function Header() {
   const navigate = useNavigate();
   const [showNotifications, setShowNotifications] = useState(false);
+  const { profile } = useAuth();
+  const image =
+    profileImages[(profile?.name || "").trim().toLowerCase()] ||
+    tanmayImg;
 
   return (
     <header className="header">
@@ -58,13 +75,13 @@ function Header() {
         <div className="profile">
 
           <img
-            src="https://api.dicebear.com/9.x/personas/svg?seed=Admin"
-            alt="Admin"
+            src={image}
+            alt={profile?.name || profile?.username}
           />
 
           <div>
-            <h4>Admin</h4>
-            <p>Online</p>
+            <h4>{profile?.name || profile?.username || "Loading..."}</h4>
+            <p>{profile?.status || "Online"}</p>
           </div>
 
         </div>
